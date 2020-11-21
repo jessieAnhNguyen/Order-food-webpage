@@ -1,0 +1,51 @@
+{% extends "base.html" %} {% block title %}Order Page{% endblock %} {% block
+page_content %}
+<div class="formContain">
+  <h2>Place Your Order</h2>
+  <form action="" method="post">
+    {{ form.csrf_token }}
+    <p>
+      {{form.menu.label}} <br />
+      {{form.menu()}}
+    </p>
+    <ul>
+      {%for error in form.menu.errors%}
+      <li style="color: red">{{error}}</li>
+      {%endfor%}
+    </ul>
+
+    <p>
+      {{form.numItem.label}} <br />
+      {{form.numItem()}}
+    </p>
+    <ul>
+      {%for error in form.numItem.errors%}
+      <li style="color: red">{{error}}</li>
+      {%endfor%}
+    </ul>
+    <p>
+      {{form.date.label}} <br />
+      {{form.date()}}
+    </p>
+
+    <ul>
+      {%for error in form.date.errors%}
+      <li style="color: red">{{error}}</li>
+      {%endfor%}
+    </ul>
+
+    <p>
+      {{form.note.label}} <br />
+      {{form.note()}}
+    </p>
+
+    <ul>
+      {%for error in form.note.errors%}
+      <li style="color: red">{{error}}</li>
+      {%endfor%}
+    </ul>
+    <p class="submitButton">{{form.submit()}}</p>
+  </form>
+</div>
+
+{% endblock %}
