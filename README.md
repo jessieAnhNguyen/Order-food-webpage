@@ -2,7 +2,7 @@
 
 Simple webpage for user to sign up and order food.
 
-The website is created by me as I started to learn Web development. The tech stack I use:
+The website is created by me as I started to learn Web development using Flask. The tech stack I use:
 
 - Back-end: Flask, Jinja2
 - Front-end: HTML/CSS, Bootstrap, JavaScript
